@@ -2,7 +2,7 @@ name: Flutter
 
 on:
   push:
-    types: ["master"]
+    branches: ["master"]
   pull_request:
     types: [closed]
 
