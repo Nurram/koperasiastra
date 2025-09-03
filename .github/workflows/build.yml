@@ -1,8 +1,6 @@
 name: Flutter
 
 on:
-  push:
-    branches: ["main"]
   pull_request:
     types: [closed]
 
@@ -12,3 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: action/checkout@v4
+      
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.3.10'
+      
+      - name: Install dependencies
+        run: flutter pub get
