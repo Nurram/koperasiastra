@@ -1,6 +1,8 @@
 name: Flutter
 
 on:
+  push:
+    types: ["master"]
   pull_request:
     types: [closed]
 
